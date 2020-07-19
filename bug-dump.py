@@ -25,6 +25,10 @@ import sys
 
 from launchpadlib.launchpad import Launchpad
 
+import sys
+if sys.version_info[0] >= 3:
+    unicode = str
+
 LPCACHEDIR = os.path.expanduser(os.environ.get('LPCACHEDIR',
                                                '~/.launchpadlib/cache'))
 
